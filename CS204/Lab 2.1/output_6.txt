@@ -1,0 +1,9 @@
+Steps: 
+
+A -> C
+A -> B
+C -> B
+A -> C
+B -> A
+B -> C
+A -> C

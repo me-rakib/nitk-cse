@@ -1,0 +1,2 @@
+List: 1 2 3 4 5 
+After deleting last node: 1 2 3 4 

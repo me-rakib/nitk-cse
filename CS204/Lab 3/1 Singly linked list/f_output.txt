@@ -1,0 +1,2 @@
+List: 1 2 3 4 5 
+List after deleting 5 nth position: 1 2 3 4 

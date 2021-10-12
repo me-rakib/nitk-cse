@@ -1,0 +1,2 @@
+List: 1 2 3 4 5 
+After inserting 10 in position 6: 1 2 3 4 5 10 
