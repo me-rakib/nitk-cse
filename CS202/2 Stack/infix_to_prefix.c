@@ -8,10 +8,10 @@ Algo:
 5. Print
 */
 
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 #define MAX_SIZE 100
 
 char stack[MAX_SIZE];
@@ -24,15 +24,72 @@ void convert(char *infix, char *prefix);
 int is_operator(char ch);
 int precedence(char ch);
 
+int stack_int[MAX_SIZE];
+int top_int = -1;
+void push_int(int data);
+int pop_int();
+int evaluate(char *prefix);
+
 int main()
 {
-    char infix[MAX_SIZE] = "(A+B^C)*D+E^5", prefix[MAX_SIZE];
+    char infix[MAX_SIZE] = "5^3", prefix[MAX_SIZE];
     printf("Infix: %s\n", infix);
     reverse(infix);
     shift_parenthesis(infix);
     convert(infix, prefix);
     reverse(prefix);
-    printf("Prefix: %s", prefix);
+    printf("Prefix: %s\n", prefix);
+    printf("Result: %d", evaluate(prefix));
+    return 0;
+}
+
+int evaluate(char *prefix)
+{
+    int i, len = strlen(prefix), data1, data2, p;
+    char ch;
+    for (i = len - 1; i >= 0; i--)
+    {
+        ch = prefix[i];
+        if (isdigit(ch))
+        {
+            push_int(ch - '0');
+        }
+        else
+        {
+            data1 = pop_int();
+            data2 = pop_int();
+            switch (ch)
+            {
+            case '+':
+                push_int(data1 + data2);
+                break;
+            case '-':
+                push_int(data1 - data2);
+                break;
+            case '*':
+                push_int(data1 * data2);
+                break;
+            case '/':
+                push_int(data1 / data2);
+                break;
+            case '^':
+                p = lround(pow(data1, data2));
+                push_int(p);
+                break;
+            }
+        }
+    }
+    return stack_int[top_int];
+}
+
+void push_int(int data)
+{
+    stack_int[++top_int] = data;
+}
+
+int pop_int()
+{
+    return stack_int[top_int--];
 }
 
 void convert(char *infix, char *prefix)
