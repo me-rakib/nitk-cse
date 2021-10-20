@@ -13,10 +13,10 @@ https://www.tutorialspoint.com/data_structures_algorithms/expression_parsing_usi
 
 */
 
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include<math.h>
 #define MAX_SIZE 100
 
 char stack[MAX_SIZE];
@@ -139,7 +139,7 @@ int evaluate(char *postfix)
 {
     char ch;
     int i = 0, data1, data2;
-    
+
     while (postfix[i] != '\0')
     {
         ch = postfix[i];
@@ -166,6 +166,9 @@ int evaluate(char *postfix)
             case '/':
                 push_int(data1 / data2);
                 break;
+            case '^':
+                push_int(pow(data1, data2));
+                break;
             }
         }
         i++;
@@ -175,7 +178,8 @@ int evaluate(char *postfix)
 
 int main()
 {
-    char infix[MAX_SIZE] = "(A+B^C)*D+E^5", postfix[MAX_SIZE];
+    // char infix[MAX_SIZE] = "(A+B^C)*D+E^5", postfix[MAX_SIZE];
+    char infix[MAX_SIZE] = "(20+2^3)*4+5^5", postfix[MAX_SIZE];
     convert(infix, postfix);
     printf("Infix: %s\n", infix);
     printf("Postfix: %s\n", postfix);

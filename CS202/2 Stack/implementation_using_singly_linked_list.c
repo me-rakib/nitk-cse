@@ -55,11 +55,11 @@ void print()
 int main()
 {
     push(10);
-    print();
+    // print();
     push(5);
-    print();
+    // print();
     push(7);
     print();
-    Top();
+    // Top();
     return 0;
 }
