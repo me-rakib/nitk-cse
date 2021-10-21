@@ -13,27 +13,27 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 
-    int i, j, n, *arr, ind, temp;
+    int i, j, n, *A, ind, temp;
     scanf("%d", &n);
-    arr = (int *)malloc(n * sizeof(int));
+    A = (int *)malloc(n * sizeof(int));
     for (i = 0; i < n; i++)
     {
-        scanf("%d", (arr + i));
+        scanf("%d", (A + i));
     }
     for (i = 0; i < n - 1; i++)
     {
         ind = i;
         for (j = i; j < n; j++)
         {
-            if (arr[ind] > arr[j])
+            if (A[ind] > A[j])
             {
                 ind = j;
             }
         }
-        swipe(&arr[ind], &arr[i]);
+        swipe(&A[ind], &A[i]);
     }
     for (i = 0; i < n; i++)
     {
-        printf("%d ", *(arr + i));
+        printf("%d ", *(A + i));
     }
 }
