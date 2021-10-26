@@ -93,10 +93,10 @@ struct Node *insert(struct Node *head, float coefficient, int exponent)
     newP->exponent = exponent;
     newP->next = NULL;
 
-    if (head == NULL || exponent > head->exponent)
+    if (head == NULL || exponent > head->exponent)   // add first
     {
         newP->next = head;
-        head = newP;
+        head = newP;    
     }
     else
     {

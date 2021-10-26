@@ -46,6 +46,12 @@ struct Node *insert(struct Node *tail, int data)
         tail->next = newP;
         newP->next = temp;
         tail = newP;
+
+        /*
+        newP->next = tail->next;
+        tail->next = newP;
+        tail = newP;
+        */
     }
     return tail;
 }

@@ -57,7 +57,7 @@ bool is_same_element(struct Node *head1, struct Node *head2)
 {
     while (head1 != NULL && head2 != NULL)
     {
-        if (head1->data != head2->data)
+        if (head1->data != head2->data)  // as list is sorted
         {
             return false;
         }

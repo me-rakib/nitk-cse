@@ -83,7 +83,7 @@ struct Node *insert(struct Node *head, int data)
 
     if (head == NULL || data < head->data)
     {
-        newP->next = head;
+        newP->next = head;    // add in the begaining
         head = newP;
     }
     else

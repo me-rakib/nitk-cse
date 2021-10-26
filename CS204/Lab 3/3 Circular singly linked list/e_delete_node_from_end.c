@@ -38,7 +38,7 @@ int main()
 struct Node *delete (struct Node *tail)
 {
     struct Node *temp = tail->next, *temp1 = NULL;
-    while(temp->next->next != tail->next)
+    while(temp->next != tail)
     {
         temp = temp->next;
     }
@@ -48,6 +48,16 @@ struct Node *delete (struct Node *tail)
     free(temp1);
     temp1 = NULL;
     return tail;
+    // while(temp->next->next != tail->next)
+    // {
+    //     temp = temp->next;
+    // }
+    // temp1 = temp->next;
+    // temp->next = temp1->next;
+    // tail = temp;
+    // free(temp1);
+    // temp1 = NULL;
+    // return tail;
 }
 
 // function to insert node at the end

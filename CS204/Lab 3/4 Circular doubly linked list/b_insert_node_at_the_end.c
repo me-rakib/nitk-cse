@@ -44,12 +44,18 @@ struct Node *insert(struct Node *tail, int data)
     }
     else
     {
-        struct Node *temp = tail->next;
-        tail->next = newP;
+        tail->next->prev = newP;
+        newP->next = tail->next;
         newP->prev = tail;
-        newP->next = temp;
-        temp->prev = newP;
+        tail->next = newP;
         tail = newP;
+
+        // struct Node *temp = tail->next;
+        // tail->next = newP;
+        // newP->prev = tail;
+        // newP->next = temp;
+        // temp->prev = newP;
+        // tail = newP;
     }
     return tail;
 }
