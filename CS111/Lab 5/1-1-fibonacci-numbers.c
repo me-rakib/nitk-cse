@@ -1,5 +1,6 @@
 #include<stdio.h>
 void fibo(int n, int n1, int n2);
+
 int main()
 {
     int n, n1=0, n2=1;
