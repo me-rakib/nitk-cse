@@ -32,7 +32,7 @@ int evaluate(char *prefix);
 
 int main()
 {
-    char infix[MAX_SIZE] = "5^3", prefix[MAX_SIZE];
+    char infix[MAX_SIZE] = "(2+2^3)*4+5^5", prefix[MAX_SIZE];
     printf("Infix: %s\n", infix);
     reverse(infix);
     shift_parenthesis(infix);
