@@ -179,10 +179,10 @@ int evaluate(char *postfix)
 int main()
 {
     // char infix[MAX_SIZE] = "(A+B^C)*D+E^5", postfix[MAX_SIZE];
-    char infix[MAX_SIZE] = "(20+2^3)*4+5^5", postfix[MAX_SIZE];
+    char infix[MAX_SIZE] = "(2+2^3)*4+5^5", postfix[MAX_SIZE];
     convert(infix, postfix);
     printf("Infix: %s\n", infix);
     printf("Postfix: %s\n", postfix);
-    printf("Result: %d\n", evaluate(postfix));
+    printf("Result: %d\n", evaluate(postfix)); 
     return 0;
 }
