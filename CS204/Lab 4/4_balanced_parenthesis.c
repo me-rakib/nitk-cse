@@ -9,6 +9,7 @@ struct Node
     struct Node *next;
 };
 
+// function decleration
 void push(char ch);
 char pop();
 int check_balanced(char *exp);
@@ -30,6 +31,7 @@ int main()
     return 0;
 }
 
+// function to match
 int match(char ch)
 {
     char temp = pop();
@@ -48,6 +50,7 @@ int match(char ch)
     return 0;
 }
 
+// function for balanced parenthesis
 int check_balanced(char *exp)
 {
     int i = 0;
