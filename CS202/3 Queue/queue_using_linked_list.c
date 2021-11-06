@@ -13,7 +13,7 @@ struct Node *rear = NULL;
 
 bool is_empty()
 {
-    return (front == NULL & rear == NULL);
+    return (front == NULL && rear == NULL);
 }
 
 int get_front()
