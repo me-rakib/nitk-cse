@@ -1,8 +1,10 @@
 /*
+
 1. Iterate all the elements
 2. Compate the current value with previous
     - if prev > current then swape
     - else break the loop
+    
 */
 
 #include <stdio.h>
