@@ -1,3 +1,12 @@
+/*
+Push operation costly-
+to manage push we need two queue lets say q1, q2
+now - 
+1. enqueue data into q2
+2. dequeue everything from q1 and enqueue to q2
+3. swap q1 and q2 
+*/
+
 #include <iostream>
 #include <queue>
 

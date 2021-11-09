@@ -1,7 +1,7 @@
 /*
 Algo - 
 1. if found any digit push into stack
-2. if any operator found pop tow element from stack
+2. if any operator found pop two element from stack
 3. based on operator do the same and push the result into stack 
 4. if traversal is done return the last element from stack
 */

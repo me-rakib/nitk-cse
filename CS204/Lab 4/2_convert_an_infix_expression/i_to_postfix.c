@@ -106,7 +106,7 @@ void convert(char *infix, char *postfix)
 
 int main()
 {
-    char infix[MAX_SIZE] = "(20+2^3)*4+5^5", postfix[MAX_SIZE];
+    char infix[MAX_SIZE] = "(2+2^3)*4+5^5", postfix[MAX_SIZE];
     printf("Infix expression: %s\n", infix);
     convert(infix, postfix);
     printf("Postfix expression: %s", postfix);

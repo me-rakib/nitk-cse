@@ -12,6 +12,8 @@
 
 #include <stdio.h>
 
+int comparison = 0;
+
 int getMax(int *arr, int size)
 {
     int i, max = arr[0];
@@ -55,6 +57,7 @@ void radixSort(int *arr, int size)
             reminder = (arr[j] / divisor) % 10;
             bucket[reminder][bucket_count[reminder]] = arr[j];
             bucket_count[reminder]++;
+            comparison++;
         }
         int ind = 0;
         for(j=0; j<size; j++)
@@ -74,5 +77,6 @@ int main()
     int n = sizeof(arr) / sizeof(arr[0]);
     radixSort(arr, n);
     print(arr, n);
+    printf("\nTotal comparison = %d", comparison);
     return 0;
 }

@@ -9,6 +9,8 @@
 
 #include <stdio.h>
 
+int comparison = 0;
+
 void swape(int *n1, int *n2)
 {
     int temp = *n1;
@@ -30,6 +32,7 @@ int main()
                 break;
             }
             swape(&arr[j - 1], &arr[j]);
+            comparison++;
         }
     }
 
@@ -37,4 +40,5 @@ int main()
     {
         printf("%d ", arr[i]);
     }
+    printf("\nTotal comparison = %d", comparison);
 }

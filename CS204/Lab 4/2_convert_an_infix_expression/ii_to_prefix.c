@@ -1,9 +1,10 @@
 /*
 Algo -
 1. reverse infix
-2. shift ( whth ) and ) with (
-3. use infix to postfix methode with little modification - for ^ use precedence(ch) <= precedence(stack[top])
-other wise use precedence(ch) < precedence(stack[top])
+2. shift ( with ) and ) with (
+3. use infix to postfix methode with little modification 
+    - for ^ use precedence(ch) <= precedence(stack[top])
+    otherwise use precedence(ch) < precedence(stack[top])
 4. reverse the result getting from 3
 */
 
