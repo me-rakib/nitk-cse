@@ -43,7 +43,7 @@ int find_min(struct Node *root)
 {
     if(root == NULL)
     {
-        printf("Errot: Empty tree");
+        printf("Error: Empty tree");
         return -1;
     }
     while (root->left != NULL) 
