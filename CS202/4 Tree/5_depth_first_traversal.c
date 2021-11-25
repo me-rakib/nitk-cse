@@ -71,5 +71,6 @@ int main()
     root = insert(root, 8);
     root = insert(root, 12);
     root = insert(root, 30);
-    postorder(root);
+    postor
+    der(root);
 }
