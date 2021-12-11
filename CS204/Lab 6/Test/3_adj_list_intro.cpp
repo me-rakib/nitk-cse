@@ -5,18 +5,24 @@ using namespace std;
 
 int main()
 {
-    vector<int> v[5];
-    v[0].push_back(0);
-    v[0].push_back(1);
-    v[0].push_back(3);
-
-    v[1].push_back(3);
-    v[1].push_back(3);
-    v[1].push_back(3);
-
-    for (int i = 0; i < v[0].size(); i++)
+    vector<int> v[10];
+    int vertex, edge;
+    cin >> vertex >> edge;
+    int i;
+    for(i=0; i<edge; i++)
     {
-        cout << v[0][i] << " ";
+        int x, y;
+        cin >> x >> y;
+        v[x].push_back(y);
+        v[y].push_back(x);
     }
-    return 0;
+
+    for(i=0; i<edge; i++)
+    {
+        for(int j=0; j<v[i].size(); j++)
+        {
+            cout << v[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
