@@ -21,8 +21,9 @@ struct Graph
     struct node **adjLists;
 };
 
+struct Graph *graph;
 // DFS algo
-void DFS(struct Graph *graph, int vertex)
+void DFS(int vertex)
 {
     struct node *adjList = graph->adjLists[vertex];
     struct node *temp = adjList;
@@ -36,7 +37,7 @@ void DFS(struct Graph *graph, int vertex)
 
         if (graph->visited[connectedVertex] == 0)
         {
-            DFS(graph, connectedVertex);
+            DFS(connectedVertex);
         }
         temp = temp->next;
     }
@@ -71,7 +72,7 @@ struct Graph *createGraph(int vertices)
 }
 
 // Add edge
-void addEdge(struct Graph *graph, int src, int dest)
+void addEdge(int src, int dest)
 {
     // Add edge from src to dest
     struct node *newNode = createNode(dest);
@@ -85,7 +86,7 @@ void addEdge(struct Graph *graph, int src, int dest)
 }
 
 // Print the graph
-void printGraph(struct Graph *graph)
+void printGraph()
 {
     int v;
     for (v = 0; v < graph->numVertices; v++)
@@ -103,15 +104,15 @@ void printGraph(struct Graph *graph)
 
 int main()
 {
-    struct Graph *graph = createGraph(4);
-    addEdge(graph, 0, 1);
-    addEdge(graph, 0, 2);
-    addEdge(graph, 1, 2);
-    addEdge(graph, 2, 3);
+    graph = createGraph(4);
+    addEdge(0, 1);
+    addEdge(0, 2);
+    addEdge(1, 2);
+    addEdge(2, 3);
 
     printGraph(graph);
 
-    DFS(graph, 2);
+    DFS(2);
 
     return 0;
 }

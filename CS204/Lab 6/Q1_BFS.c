@@ -15,6 +15,7 @@ bool isEmpty(struct Queue *q);
 bool isFull(struct Queue *q);
 void enqueue(struct Queue *q, int data);
 int dequeue(struct Queue *q);
+
 void insert(int edge);
 void BFS_display(int ver);
 void BFS_connect(int ver);
@@ -33,7 +34,7 @@ int main()
     printf("1. Insert\n");
     printf("2. BFS_Display\n");
     printf("3. BFS_Search\n");
-    printf("2. BFS_Connect\n");
+    printf("4. BFS_Connect\n");
 
     while (true)
     {
@@ -64,6 +65,11 @@ int main()
         }
     }
     return 0;
+
+    // input v - 5 e - 7
+    // 0 1, 0 2, 1 2, 1 4, 1 3, 2 4, 3 4
+    // p-0 -> 0 1 2 3 4
+
 }
 
 void insert(int edge)

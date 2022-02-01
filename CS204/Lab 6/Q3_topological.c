@@ -56,6 +56,9 @@ int main()
     {
         printf("%d ", res[i]);
     }
+
+    // 6
+    // 5 2, 5 0, 4 0, 4 1, 2 3, 3 1
 }
 
 void create_graph()
