@@ -34,6 +34,13 @@ int main()
         processes.push_back({i + 1, u_at, u_bt, 0, 0});
     }
 
+    /*
+    1 3
+    2 4
+    1 2
+    4 4
+    */
+
     int completed = 0, current_time = 0;
     int *is_completed = (int *)calloc(n, sizeof(int));
     
