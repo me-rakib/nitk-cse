@@ -1,3 +1,4 @@
+// Round Robin - RR
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
@@ -40,6 +41,14 @@ int main()
         remaining_bt[i] = u_bt;
     }
 
+    /*
+    0 5
+    1 4
+    2 2
+    4 1
+    */
+
+    // sorting based on arrival time
     sort(processes.begin(), processes.end(), sort_at);
 
     int id, completed = 0, current_time = 0, *mark = (int *)calloc(1000, sizeof(n));
@@ -96,8 +105,14 @@ int main()
         }
     }
 
+    // sorting based on process id
     sort(processes.begin(), processes.end(), sort_pid);
     print(processes, n);
+
+    cout << "Avg turnaround time: " << sum_tat / (float)n << endl;
+    cout << "Avg waiting time: " << sum_wt / (float)n << endl;
+
+    return 0;
 }
 
 bool sort_at(Process p1, Process p2)
