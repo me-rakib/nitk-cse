@@ -66,6 +66,7 @@ int main()
             remaining_bt[id] -= tq;
             current_time += tq;
         }
+
         else
         {
             current_time += remaining_bt[id];
@@ -79,6 +80,7 @@ int main()
             sum_tat += processes[id].tat;
             sum_wt += processes[id].wt;
         }
+
         for (int i = 1; i < n; i++)
         {
             if (remaining_bt[i] > 0 && processes[i].at <= current_time && mark[i] == 0)
@@ -87,6 +89,7 @@ int main()
                 mark[i] = 1;
             }
         }
+        
         if (remaining_bt[id] > 0)
         {
             qu.push(id);

@@ -50,6 +50,7 @@ int main()
         int id = -1;
         int mn = 10000;
 
+        // find  process with min bt which has arrived at ct
         for (i = 0; i < n; i++)
         {
             if (process[i].at <= current_time && is_completed[i] == 0)
@@ -70,6 +71,7 @@ int main()
             }
         }
 
+        // if any process found
         if (id != -1)
         {
             bt_remaining[id] -= 1;

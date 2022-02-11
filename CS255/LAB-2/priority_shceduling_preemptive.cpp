@@ -74,6 +74,7 @@ int main()
             }
         }
 
+        // if any process found
         if (id != -1)
         {
             remaining_bt[id] -= 1;
