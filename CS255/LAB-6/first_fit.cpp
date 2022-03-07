@@ -19,6 +19,7 @@ int main()
     allocated_block = (int *)calloc(total_process, sizeof(int));
 
     // taking input for block size
+    // Input -> 150, 350
     cout << endl;
     for (i = 0; i < total_block; i++)
     {
@@ -27,6 +28,7 @@ int main()
     }
 
     // taking input for process size
+    // Input -> 300, 25, 125, 50
     cout << endl;
     for (i = 0; i < total_process; i++)
     {
