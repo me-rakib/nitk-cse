@@ -55,7 +55,6 @@ int main()
             current_frame = (current_frame + 1) % total_frame;
         }
 
-        cout << "Page in frames: " << endl;
         for (j = 0; j < total_frame; j++)
         {
             cout << frame[j] << " ";
